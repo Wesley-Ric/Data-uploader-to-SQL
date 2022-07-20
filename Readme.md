@@ -18,7 +18,7 @@ if aberto == 0:     #testa se está vazio pelo getsize
     tkinter.messagebox.showinfo('Erro!' , 'O arquivo enviado está vazio')
 else:
 ~~~
-2. Se a variavél camarq (caminho do arquivo) está vazia
+2. Se a variavél camarq (caminho do arquivo) está vazia.
 
 ~~~python
 if txtCaminho['text'] == '':        #se estiver sem caminho do arquivo não roda
@@ -34,7 +34,7 @@ elif camarq.endswith('.wes') == False:  #testa se a extensão é compatível
 else:
 ~~~
 
-4. Se o arquivo está vazio usando getsize
+4. Se o arquivo está vazio usando getsize.
 
 ~~~python
 aberto = os.path.getsize(camarq)    #atribui o tamanho do arquivo a variável
@@ -43,7 +43,7 @@ if aberto == 0:     #testa se está vazio pelo getsize
 else:
 ~~~
 
-5. Se existe o cabeçalho (header) no arquivo
+5. Se existe o cabeçalho (header) no arquivo.
 
 ~~~python
 if header in line:  #se tiver 'cod,qtd,tipo,ht,hr' na linha
@@ -85,11 +85,11 @@ else:
     break
 ~~~
 
-### Proximos passos
+### Proximos passos.
 
-Após testar se existe header no arquivo o script define ',' como a separação das colunas usando a biblioteca pandas `variavel1 = pandas.read_csv(camarq, sep=',', encoding='latin-1')`
+Após testar se existe header no arquivo o script define ',' como a separação das colunas usando a biblioteca pandas `variavel1 = pandas.read_csv(camarq, sep=',', encoding='latin-1')`.
 
-depois cria um dataframe representado por df puxando a variavel1 para indicar a separação das colunas e nomeando as colunas através do pandas com o metodo DataFrame `df = pandas.DataFrame(variavel1, columns=['cod', 'qtd', 'tipo', 'dt', 'hr'])`
+depois cria um dataframe representado por df puxando a variavel1 para indicar a separação das colunas e nomeando as colunas através do pandas com o metodo DataFrame `df = pandas.DataFrame(variavel1, columns=['cod', 'qtd', 'tipo', 'dt', 'hr'])`.
 
 Subsequente converte as colunas em Strings:
 
